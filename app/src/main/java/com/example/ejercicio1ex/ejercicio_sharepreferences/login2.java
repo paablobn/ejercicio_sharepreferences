@@ -18,6 +18,8 @@ public class login2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
+        sharedPreferences = getSharedPreferences(Constantes.USER,MODE_PRIVATE);
+
         btnEliminar = findViewById(R.id.btnEliminar);
 
         btnEliminar.setOnClickListener(new View.OnClickListener() {

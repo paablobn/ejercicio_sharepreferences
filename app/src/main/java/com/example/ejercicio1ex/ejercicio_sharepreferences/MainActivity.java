@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
 
     private EditText txtUsuario, txtContraseña;
+
     private Button btnGuardar;
 
     private final String Usuario = "u";
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void inicializarValores() {
-        String usuario = sharedPreferences.getString(Constantes.PASSWORD, null);
+        String usuario = sharedPreferences.getString(Constantes.USER, null);
         String contrasenya = sharedPreferences.getString(Constantes.PASSWORD, null);
 
         if (usuario != null && contrasenya != null) {
