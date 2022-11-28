@@ -2,10 +2,13 @@ package com.example.ejercicio1ex.ejercicio_sharepreferences;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class login2 extends AppCompatActivity {
 
@@ -18,6 +21,7 @@ public class login2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
+
         sharedPreferences = getSharedPreferences(Constantes.USER,MODE_PRIVATE);
 
         btnEliminar = findViewById(R.id.btnEliminar);
@@ -29,6 +33,9 @@ public class login2 extends AppCompatActivity {
                 editor.remove(Constantes.USER);
                 editor.remove(Constantes.PASSWORD);
                 editor.apply();
+                Toast.makeText(login2.this, "USUARIO ELIMINADO", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(login2.this,MainActivity.class));
+                finish();
             }
         });
     }

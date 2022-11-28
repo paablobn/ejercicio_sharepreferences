@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    SharedPreferences sharedPreferences;
+    private SharedPreferences sharedPreferences;
 
     private EditText txtUsuario, txtContraseña;
 
@@ -58,8 +58,8 @@ public class MainActivity extends AppCompatActivity {
         String contrasenya = sharedPreferences.getString(Constantes.PASSWORD, null);
 
         if (usuario != null && contrasenya != null) {
-            if (usuario.equals(Usuario) && contrasenya.equals(Password)){
-                startActivity(new Intent(MainActivity.this,login2.class));
+            if (usuario.equals(Usuario) && contrasenya.equals(Password)) {
+                startActivity(new Intent(MainActivity.this, login2.class));
             }
         }
     }
